@@ -1,0 +1,44 @@
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+            
+    def display_marks(self):
+        return self.marks
+            
+    def calculate_average(self):
+        if len(self.marks) == 0:
+            return 0
+        return sum(self.marks) / len(self.marks)
+            
+
+alice = Student("Alice", [85, 90, 88, 92])
+bob = Student("Bob", [75, 88, 78, 72])
+
+print("          Laboratory Activity")
+
+print("Student: ", alice.name)
+print("Marks: ", alice.display_marks())
+
+average_alice = alice.calculate_average()
+print(f"Average Marks: {average_alice:.2f}")
+
+
+print("Student: ", bob.name)
+print("Marks: ", bob.display_marks())
+
+average_bob = bob.calculate_average()
+print(f"Average Marks: {average_bob:.2f}")
+
+
+
+
+
+output:
+          Laboratory Activity
+Student:  Alice
+Marks:  [85, 90, 88, 92]
+Average Marks: 88.75
+Student:  Bob
+Marks:  [75, 88, 78, 72]
+Average Marks: 78.25
